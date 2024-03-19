@@ -11,95 +11,96 @@ interface FocusActiveSentencePluginSettings {
 const DEFAULT_SETTINGS: FocusActiveSentencePluginSettings = {
 	sentenceDelimiters: '. |! |? |。|！|？',
 	extraCharacters: '* |“ |” |‘ |’ |》 |」 |“ |‘ ',
-	titles: `Mr.
-	Ms.
-	Mrs.
-	Dr.
-	Prof.
-	e.g.
-	i.e.
-	vs.
-	a.m.
-	p.m.
-	p.s.
-	r.s.v.p.
-	a.s.a.p.
-	A.
-	B.
-	C.
-	D.
-	E.
-	F.
-	G.
-	H.
-	I.
-	J.
-	K.
-	L.
-	M.
-	N.
-	O.
-	P.
-	Q.
-	R.
-	S.
-	T.
-	U.
-	V.
-	W.
-	X.
-	Y.
-	Z.
-	Fr.
-	So
-	Sr.
-	Jr.
-	Rev.
-	Capt.
-	Sgt.
-	Col.
-	Gen.
-	Adm.
-	Rep.
-	Sen.
-	Gov.
-	Pres.
-	Hon.
-	Maj.
-	Cpl.
-	Lt.
-	Supt.
-	Amb.
-	Esq.
-	Const.
-	Det.
-	Inspt.
-	Pvt.
-	Cmdr.
-	Fmr.
-	Mgr.
-	Adm.
-	Sec.
-	Treas.
-	Dir.
-	Atty.
-	Insp.
-	Cdr.
-	Bp.
-	Cllr.
-	Comm.
-	Brig.
-	Ed.
-	Arch.
-	Eng.
-	Sc.
-	Com.
-	Phil.
-	Res.
-	Econ.
-	Acc.
-	copr.
-	Ltd.`
+	titles: 
+`Mr.
+Ms.
+Mrs.
+Dr.
+Prof.
+e.g.
+i.e.
+vs.
+a.m.
+p.m.
+p.s.
+r.s.v.p.
+a.s.a.p.
+A.
+B.
+C.
+D.
+E.
+F.
+G.
+H.
+I.
+J.
+K.
+L.
+M.
+N.
+O.
+P.
+Q.
+R.
+S.
+T.
+U.
+V.
+W.
+X.
+Y.
+Z.
+Fr.
+So
+Sr.
+Jr.
+Rev.
+Capt.
+Sgt.
+Col.
+Gen.
+Adm.
+Rep.
+Sen.
+Gov.
+Pres.
+Hon.
+Maj.
+Cpl.
+Lt.
+Supt.
+Amb.
+Esq.
+Const.
+Det.
+Inspt.
+Pvt.
+Cmdr.
+Fmr.
+Mgr.
+Adm.
+Sec.
+Treas.
+Dir.
+Atty.
+Insp.
+Cdr.
+Bp.
+Cllr.
+Comm.
+Brig.
+Ed.
+Arch.
+Eng.
+Sc.
+Com.
+Phil.
+Res.
+Econ.
+Acc.
+copr.
+Ltd.`
 }
 
 export default class FocusActiveSentencePlugin extends Plugin {
