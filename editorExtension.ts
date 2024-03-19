@@ -20,8 +20,8 @@ function textStartsWithTitle(lineText: string, titles: string[], i: number) {
 function getActiveSentenceBounds(line: Line, pos: number) {
 	// @ts-ignore
 	const plugin:FocusActiveSentencePlugin = window.app.plugins.plugins["focus-active-sentence"];
-	const sentenceDelimiters = plugin.settings.sentenceDelimiters.split("");
-	const extraCharacters = plugin.settings.extraCharacters.split("");
+	const sentenceDelimiters = plugin.settings.sentenceDelimiters.split("|");
+	const extraCharacters = plugin.settings.extraCharacters.split("|");
 	const titles = plugin.settings.titles.split("\n");
 
 	const lineStart = line.from;
@@ -31,7 +31,7 @@ function getActiveSentenceBounds(line: Line, pos: number) {
 
 	for (let i = pos-lineStart-1; i >= 0; i--) {
 
-		if (sentenceDelimiters.contains(lineText[i])) {
+		if (sentenceDelimiters.contains(lineText[i]) || sentenceDelimiters.contains(lineText[i]+lineText[i+1])) {
 
 			// Account for titles e.g. Mr., Ms., Mrs.
 			if (textStartsWithTitle(lineText, titles, i)) continue;
@@ -45,7 +45,7 @@ function getActiveSentenceBounds(line: Line, pos: number) {
 			}
 
 			// Account for markdown syntax at the end of sentences (*)
-			while (extraCharacters.contains(lineText[i + offset]) && sentenceDelimiters.contains(lineText[i + offset - 1]) && offset < pos-lineStart-1) {
+			while (extraCharacters.contains(lineText[i + offset]) && (sentenceDelimiters.contains(lineText[i + offset - 1]) || sentenceDelimiters.contains(lineText[i + offset - 1]+lineText[i + offset])) && offset < pos-lineStart-1) {
 				offset += 1;
 			}
 
@@ -61,7 +61,7 @@ function getActiveSentenceBounds(line: Line, pos: number) {
 
 	for (let i = pos-lineStart; i < line.length; i++) {
 
-		if (sentenceDelimiters.contains(lineText[i])) {
+		if (sentenceDelimiters.contains(lineText[i]) || sentenceDelimiters.contains(lineText[i]+lineText[i+1])) {
 
 			// Account for titles e.g. Mr., Ms., Mrs.
 			if (textStartsWithTitle(lineText, titles, i)) continue;
@@ -70,7 +70,7 @@ function getActiveSentenceBounds(line: Line, pos: number) {
 			let offset = 1;
 
 			// Account for ellipses, "!?", etc.
-			while (sentenceDelimiters.contains(lineText[i + offset]) && offset < line.length) {
+			while ((sentenceDelimiters.contains(lineText[i + offset]) || sentenceDelimiters.contains(lineText[i + offset]+lineText[i+offset+1])) && offset < line.length) {
 				offset += 1;
 			}
 

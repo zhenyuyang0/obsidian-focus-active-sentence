@@ -1,11 +1,11 @@
 {
-	"id": "focus-active-sentence",
+	"id": "obsidian-focus-active-sentence",
 	"name": "Focus Active Sentence",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"minAppVersion": "0.15.0",
 	"description": "Highlight the sentence the cursor is currently resting on.",
-	"author": "artisticat",
-	"authorUrl": "https://github.com/artisticat1",
-	"fundingUrl": "https://ko-fi.com/artisticat",
+	"author": "joel-y85",
+	"authorUrl": "https://github.com/joel-y85",
+	"fundingUrl": "https://www.paypal.com/donate/?business=52H646DNTSPRU&no_recurring=0&item_name=Buy+me+a+Boba&currency_code=USD",
 	"isDesktopOnly": false
 }
