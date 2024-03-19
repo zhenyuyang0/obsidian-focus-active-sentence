@@ -1,7 +1,7 @@
 {
 	"id": "obsidian-focus-active-sentence",
 	"name": "Focus Active Sentence",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"minAppVersion": "0.15.0",
 	"description": "Highlight the sentence the cursor is currently resting on.",
 	"author": "joel-y85",
