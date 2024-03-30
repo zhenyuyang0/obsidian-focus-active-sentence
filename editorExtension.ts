@@ -127,7 +127,7 @@ function getActiveSentenceDecos(view: EditorView) {
 	}
 
 	if (start != end) {
-		addWidget(start, end, "active-sentence");
+		// addWidget(start, end, "active-sentence");
 
 		if (line.from != start)
 			addWidget(line.from, start, "active-paragraph");
