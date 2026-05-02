@@ -38,3 +38,11 @@ Build:
 ```shell
 docker run -v .:/app obsidian-focus-plugin npm run build
 ```
+
+## Create New Release
+
+Run Docker Compose production build. It'll create the `main.js` file. Then just create a new release on GitHub and upload the `main.js`, `style.css`, and `manifest.json` files.
+
+## Installation
+
+Download the files `main.js`, `style.css`, and `manifest.json` from the latest release on GitHub. Put them in a folder named `obsidian-focus-active-sentence` and put it in `.obsidian/plugins` folder.
