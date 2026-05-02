@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: obsidian-focus-active-sentence-dev
+    volumes:
+      - .:/app
+      - /app/node_modules
+    working_dir: /app
+    command: npm run dev
+    environment:
+      - NODE_ENV=development
+
+  build:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: obsidian-focus-active-sentence-build
+    volumes:
+      - .:/app
+      - /app/node_modules
+    working_dir: /app
+    command: npm run build
+    environment:
+      - NODE_ENV=production
